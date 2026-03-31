@@ -1,0 +1,134 @@
+/* ===== Base ===== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-left: 6px solid #007acc;
+  padding-left: 12px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
+
+h3 {
+  margin-top: 25px;
+  color: #007acc;
+}
+
+/* ===== Text ===== */
+p {
+  margin: 15px 0;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Images ===== */
+img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ===== Code ===== */
+pre {
+  position: inherit !important;
+}
+
+/* Prism coy のカード重なり防止（←これ残してあります） */
+pre[class*="language-"]::before,
+pre[class*="language-"]::after {
+  display: none !important;
+}
+
+/* ===== Lists ===== */
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* ===== Section spacing ===== */
+section {
+  margin-bottom: 50px;
+}
+
+/* ===== Highlight box ===== */
+.note {
+  background: #f0f8ff;
+  border-left: 4px solid #007acc;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 25px;
+  }
+}
+
+/* ===== Smartphone ===== */
+@media (max-width: 480px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
