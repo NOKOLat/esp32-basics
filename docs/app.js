@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    if (!window.location.search) {
+    window.location.replace("?chapter=01_info");//もしURLパラメータが存在していない場合にはじめのページにリダイレクトする処理
+    }
     let params = new URLSearchParams(document.location.search);
     let source = params.get("chapter");
     console.log(`try to get chapters/${source}/index.md`);
