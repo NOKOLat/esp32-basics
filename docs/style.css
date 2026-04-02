@@ -109,6 +109,20 @@ th {
   background: #f0f0f0;
 }
 
+/* ===== footer ===== */
+footer {
+  text-align: center;
+  margin: 20px;
+}
+
+/* ===== navigation ===== */
+nav {
+  text-align: center;
+}
+nav>a {
+  padding: 20px;
+}
+
 /* ===== Tablet ===== */
 @media (max-width: 768px) {
   .container {

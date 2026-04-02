@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let data = xhr2.responseText;
             // rendererを渡す
             exportMarkdown.innerHTML = marked.parse(data, { renderer });
+            Prism.highlightAll();
         }
     }
     xhr2.send();
-    Prism.highlightAll();
 });
 

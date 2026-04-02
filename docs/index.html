@@ -6,13 +6,24 @@
     <!-- marked -->
     <script src="https://cdn.jsdelivr.net/npm/marked@17.0.5/lib/marked.umd.min.js"></script>
     <!-- Prism -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-coy.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
-    <script src="app.js"></script>
+    <script src="rendering.js"></script>
+    <script src="navigater.js"></script>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="exportMarkDown" class="container"></div>
+    <div id="exportMarkDown" class="container">
+    </div>
+    <nav aria-label="章ナビゲーション" id="navigater">
+        <a id="prev" style="display: none;">← 前の章</a>
+        <a id="next" style="display: none;">次の章 →</a>
+    </nav>
+    <footer>
+        © 2026 NoKoLAT — Released under the MIT License
+    </footer>
 </body>
 </html>
