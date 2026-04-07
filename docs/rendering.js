@@ -31,6 +31,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // rendererを渡す
             exportMarkdown.innerHTML = marked.parse(data, { renderer });
             Prism.highlightAll();
+
+            document.querySelectorAll('pre[class*=":hide"]').forEach((pre, i) => {
+                const id = `code-toggle-${i}`;
+
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = id;
+
+                const label = document.createElement('label');
+                label.htmlFor = id;
+                label.textContent = '▶ コードを見る';
+
+                input.addEventListener('change', () => {
+                label.textContent = input.checked ? '▼ コードを閉じる' : '▶ コードを見る';
+                });
+
+                pre.parentNode.insertBefore(input, pre);
+                pre.parentNode.insertBefore(label, pre);
+            });
         }
     }
     xhr2.send();

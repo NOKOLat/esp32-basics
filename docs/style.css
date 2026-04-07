@@ -64,7 +64,16 @@ pre {
   position: inherit !important;
 }
 
-/* Prism coy のカード重なり防止（←これ残してあります） */
+/* ===== Accordion code ===== */
+pre[class*=":hide"] { display: none; }
+
+/* 詳細度を上げる */
+input:checked + label + pre[class*=":hide"] { display: block; }
+
+input {
+  display: none;
+}
+/* Prism coy のカード重なり防止 */
 pre[class*="language-"]::before,
 pre[class*="language-"]::after {
   display: none !important;
