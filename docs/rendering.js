@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     renderer.code = function({ text, lang }) {
         const language = lang || 'cpp';
         // 前後の空白をtrim()で除去しつつ改行も揃える、HTMLエスケープも行う
-        const code = text.trim()
+        const code = text
+            .replace(/\r\n/g, '\n')
+            .replace(/\r/g, '\n')
+            .trim()
             .replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
