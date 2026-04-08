@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return `<img src="${href}" alt="${text}">`;
     };
     renderer.code = function({ text, lang }) {
-        const language = lang || 'cpp';
+        const hasHide = lang && lang.includes(':hide');
+        const language = lang ? lang.split(':')[0] : 'cpp';
         // 前後の空白をtrim()で除去しつつ改行も揃える、HTMLエスケープも行う
         const code = text
             .replace(/\r\n/g, '\n')
@@ -26,7 +27,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;');
 
-        return `<pre class="language-${language}"><code class="language-${language}">${code}</code></pre>`;
+        const hideClass = hasHide ? ' :hide' : '';
+        return `<pre class="language-${language}${hideClass}"><code class="language-${language}">${code}</code></pre>`;
     };
     // codeタグにprism.jsを適用するためのクラスを自動で割り振る処理
     let xhr2 = new XMLHttpRequest();
