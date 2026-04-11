@@ -190,7 +190,7 @@ void loop() {
   delay(1000);
   digitalWrite(BLUE, LOW);
   // 黄色LEDピンだけを点滅させる処理
-  LED_BLink(YELLOW, OUTPUT);
+  LED_BLink(YELLOW, 3);
   // 赤色LEDピンだけを点灯させる処理  
   digitalWrite(RED, HIGH);
   delay(1000);
@@ -264,7 +264,7 @@ void setup() {
 void loop() {
   LED_Blink(BLUE,1,1000,0);  // 青色LEDピンだけを点灯させる処理
   LED_Blink(YELLOW,3,1000,1000);  // 黄色LEDピンだけを点滅させる処理
-  LED_Blink(RED,1,1000,0)  // 黄色LEDピンだけを点灯させる処理
+  LED_Blink(RED,1,1000,0); // 黄色LEDピンだけを点灯させる処理
 }
 ```
 これにてchapter_02のプログラミングは完了です。```LED_Blink()```関数の引数をいじってリアルな信号機の動作を追求してみてみて下さい。
