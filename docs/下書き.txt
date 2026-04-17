@@ -1,0 +1,20 @@
+第三回講座の内容
+サーボモータをコントロールできるようにする。
+配列の仕組みについて学ぶ。
+↑目的はこれ
+サーボモータを使って
+
+教えたいことを**で強調している
+第一回:MH-ET LIVE MiniKit for ESP32の開発環境を整えよう
+セットアップ
+第二回:MH-ET LIVE MiniKit for ESP32で信号機を作ってみよう
+for文
+*関数*
+digitalWrite
+第三回:MH-ET LIVE MiniKit for ESP32で投下装置を作ってみよう
+PWM制御
+*配列*
+第四回:MH-ET LIVE MiniKit for ESP32で投下装置を作ってみようV2
+シリアル通信
+*ポインタ*
+センサーを読んでみよう
